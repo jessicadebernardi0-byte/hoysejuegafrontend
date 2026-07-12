@@ -17,6 +17,7 @@ body{
   font-family:Arial, sans-serif;
   background:var(--dark);
   color:var(--white);
+  overflow-x:hidden;
 }
 
 a{
@@ -54,6 +55,12 @@ a{
   height:60px;
 }
 
+.header-menu{
+  display:flex;
+  align-items:center;
+  gap:36px;
+}
+
 .nav{
   display:flex;
   gap:36px;
@@ -66,6 +73,16 @@ a{
 
 .nav a:hover{
   color:var(--primary);
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:30px;
+  line-height:1;
+  cursor:pointer;
 }
 
 .btn-login{
@@ -453,34 +470,53 @@ a{
 /* RESPONSIVE */
 
 @media(max-width:900px){
-  .nav,
-  .header-buttons{
+  .nav-toggle{
+    display:block;
+  }
 
-display:flex;
+  .header-menu{
+    display:none;
+    position:absolute;
+    top:90px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    align-items:stretch;
+    gap:20px;
+    padding:24px;
+    background:rgba(5,11,17,.98);
+    border-top:1px solid rgba(255,255,255,.1);
+  }
 
-align-items:center;
+  .header-menu.open{
+    display:flex;
+  }
 
-gap:18px;
+  .header-menu .nav{
+    flex-direction:column;
+    gap:18px;
+  }
 
-}
+  .header-menu .header-buttons{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+  }
+
+  .header-buttons .btn{
+    text-align:center;
+  }
+
+  .user-name{
+    margin-right:0;
+  }
 
   .hero-left{
     max-width:100%;
   }
 
   .search-bar{
-    grid-template-columns:2fr 1fr 1fr 1fr 220px;
-    align-items:center;grid-template-columns:2fr 1fr 1fr 1fr auto;
-    .search-bar{
-
-align-items:center;
-
-}
-    .search-bar{
-
-align-items:center;
-
-}
+    grid-template-columns:1fr;
   }
 
   .benefits-grid,
@@ -1284,7 +1320,7 @@ padding:70px 0;
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 
 gap:30px;
 
@@ -1338,11 +1374,15 @@ color:#cbd5e1;
 
 padding-bottom:70px;
 
+overflow-x:auto;
+
 }
 
 .admin-table table{
 
 width:100%;
+
+min-width:640px;
 
 border-collapse:collapse;
 
@@ -1516,7 +1556,7 @@ background:var(--primary-dark);
 .user-stats {
   padding: 55px 0 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
 }
 

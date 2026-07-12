@@ -45,39 +45,13 @@ function Footer() {
 
           <div className="footer-social">
 
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-               Instagram
-            </a>
+          <p>Instagram</p>
 
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-               Facebook
-            </a>
+          <p>Facebook</p>
 
-            <a
-              href="https://tiktok.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-               TikTok
-            </a>
+          <p>Tik Tok</p>
 
-            <a
-              href="https://wa.me/541155667788"
-              target="_blank"
-              rel="noreferrer"
-            >
-              💬 WhatsApp
-            </a>
-
-          </div>
+          <p>Whatsapp</p>
 
         </div>
 
@@ -97,6 +71,7 @@ function Footer() {
 
         </div>
 
+      </div>
       </div>
 
     </footer>
