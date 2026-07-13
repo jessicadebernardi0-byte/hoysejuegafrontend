@@ -127,7 +127,7 @@ http://localhost:5173
 La aplicación consume la API REST ubicada en:
 
 ```
-http://localhost:5000/api
+https://hoysejuegabackend-1.onrender.com/api
 ```
 
 ---
