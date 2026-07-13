@@ -95,7 +95,7 @@ npm run dev
 La aplicación quedará disponible en
 
 ```
-http://localhost:5173
+hoysejuegafrontend.vercel.app
 ```
 
 ---
